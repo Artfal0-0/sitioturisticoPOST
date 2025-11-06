@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,38 +11,45 @@
             margin: 30px;
             background-color: #f9f9f9;
         }
+
         .container {
             background: white;
             padding: 25px;
             border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
             max-width: 700px;
             margin: 0 auto;
         }
+
         h2 {
             color: #2c3e50;
             text-align: center;
         }
+
         p {
             margin: 10px 0;
             line-height: 1.6;
         }
+
         .label {
             font-weight: bold;
             color: #34495e;
         }
+
         .imagen {
             margin-top: 20px;
             text-align: center;
         }
+
         .imagen img {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h2>¡Sitio Turístico Registrado con Éxito!</h2>
@@ -105,5 +113,10 @@
         }
         ?>
     </div>
+    <!-- boton de regresar al form -->
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="index.html" style="text-decoration: none; color: white; background-color: #3498db; padding: 10px 20px; border-radius: 5px;">Regresar al formulario</a>
+    </div>
 </body>
+
 </html>
