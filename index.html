@@ -59,15 +59,18 @@
 
     <h2>Registro de Sitios Turísticos de Ecuador</h2>
 
-    <form method="post" enctype="multipart/form-data">
+    <form method="post" enctype="multipart/form-data" action="procesarPOST.php" target="_blank"
+        onsubmit="return abrirNuevaVentana()">
 
         <!-- Nombre del sitio turístico  -->
         <label class="title" for="nombre">Nombre del sitio turístico <span style="color:red;">*</span>:</label><br>
         <input class="texto" type="text" id="nombre" name="nombre" required placeholder="Ej: Mitad del Mundo"><br><br>
 
         <!-- Descripción (textarea) -->
-        <label class="title" for="descripcion">Descripción del sitio turístico <span style="color:red;">*</span>:</label><br>
-        <textarea id="descripcion" name="descripcion" rows="4" cols="50" required placeholder="Breve reseña histórica o características del lugar."></textarea><br><br>
+        <label class="title" for="descripcion">Descripción del sitio turístico <span
+                style="color:red;">*</span>:</label><br>
+        <textarea id="descripcion" name="descripcion" rows="4" cols="50" required
+            placeholder="Breve reseña histórica o características del lugar."></textarea><br><br>
 
         <!-- Provincia (select) -->
         <label class="title" for="provincia">Provincia <span style="color:red;">*</span>:</label><br>
@@ -101,24 +104,23 @@
 
         <!-- Servicios disponibles (checkbox) -->
         <label class="title">Servicios disponibles <span style="color:red;">*</span> (seleccione al menos uno):</label><br>
-        <input type="checkbox" id="guia" name="servicios" value="guia">
+        <input type="checkbox" id="guia" name="servicios[]" value="guia">
         <label for="guia">Guía turística</label><br>
-
-        <input type="checkbox" id="hospedaje" name="servicios" value="hospedaje">
+        <input type="checkbox" id="hospedaje" name="servicios[]" value="hospedaje">
         <label for="hospedaje">Hospedaje</label><br>
-
-        <input type="checkbox" id="alimentacion" name="servicios" value="alimentacion">
+        <input type="checkbox" id="alimentacion" name="servicios[]" value="alimentacion">
         <label for="alimentacion">Alimentación</label><br>
-
-        <input type="checkbox" id="transporte" name="servicios" value="transporte">
+        <input type="checkbox" id="transporte" name="servicios[]" value="transporte">
         <label for="transporte">Transporte</label><br><br>
 
         <!-- Imagen (file) -->
-        <label class="title" for="imagen">Imagen representativa del sitio turístico <span style="color:red;">*</span>:</label><br>
+        <label class="title" for="imagen">Imagen representativa del sitio turístico <span
+                style="color:red;">*</span>:</label><br>
         <input type="file" id="imagen" name="imagen" accept="image/*" required><br><br>
 
         <!-- Correo electrónico (email) -->
-        <label class="title" for="email">Correo electrónico del responsable <span style="color:red;">*</span>:</label><br>
+        <label class="title" for="email">Correo electrónico del responsable <span
+                style="color:red;">*</span>:</label><br>
         <input class="texto" type="email" id="email" name="email" required placeholder="ejemplo@dominio.com"><br><br>
 
         <!-- Fecha de registro (date) -->
@@ -130,6 +132,13 @@
         <input class="button" type="reset" value="Limpiar Formulario">
 
     </form>
+
+    <script>
+        function abrirNuevaVentana() {
+            // Esto asegura que se abra en una nueva pestaña/ventana
+            return true; // permite el envío
+        }
+    </script>
 
 </body>
 
